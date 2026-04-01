@@ -141,54 +141,6 @@ for project in discovered_projects:
 * 역엔지니어링 결과의 고도의 추론 및 해석 필요
 * 취약점 분석 및 exploit 가능성 판단 필요
 * 멀티 레이어 보안 컨텍스트 분석 필요
-
-#### 사용 도구 및 지원 방식
-
-**1. IDA Pro (Reverse Engineering)**
-* **경로**: `C:\Users\user\studyspace\settings\ida90\` (IDA Pro 9.0)
-* **지원 방식**: IDA MCP Server를 통한 자동 분석
-* **사용 시나리오**:
-  * 바이너리 구조 분석
-  * 함수 플로우 추출
-  * 패턴 인식 및 자동 분류
-  * 심볼 복원 및 분석
-* **제약사항**: IDA MCP Server 설정 필수, 대형 바이너리는 분석 시간 고려 필요
-
-**2. x64dbg / x32dbg (Dynamic Analysis)**
-* **경로**: `C:\Users\user\studyspace\settings\x64dbg_x32dbg\`
-* **지원 방식**: CLI 명령어 또는 수동 지침
-* **사용 시나리오**:
-  * Runtime behavior 추적
-  * 메모리 상태 검사
-  * 조건부 breakpoint 설정
-  * 런타임 패치 및 테스트
-* **제약사항**: Interactive debugging 필요시 사용자 참여 필요
-
-**3. dnSpy (.NET Analysis)**
-* **경로 (x64)**: `C:\Users\user\studyspace\settings\dnSpy-net-win64\`
-* **경로 (x32)**: `C:\Users\user\studyspace\settings\dnSpy-net-win32\`
-* **지원 방식**: CLI 분석 또는 수동 지침
-* **사용 시나리오**:
-  * .NET 어셈블리 역컴파일
-  * 소스 코드 복원
-  * 혼동 제거 (Deobfuscation)
-  * 리소스 추출
-* **제약사항**: .NET Framework/Core 대상에만 적용
-
-**4. PE Analysis Tools**
-* **ExeinfoPE**: `C:\Users\user\studyspace\settings\ExeinfoPE\`
-  * PE 헤더 분석, 섹션 정보, Import/Export 테이블
-* **PEview**: `C:\Users\user\studyspace\settings\PEview.exe`
-  * 상세 PE 구조 분석
-* **Scylla**: `C:\Users\user\studyspace\settings\Scylla_v0.9.8\`
-  * IAT (Import Address Table) 복원, DLL injection 테스트
-* **사용 시나리오**: 포킹(Packing) 감지, 섹션 분석, 바이너리 메타데이터 추출
-
-**5. 부가 도구**
-* **UPX**: `C:\Users\user\studyspace\settings\upx-5.1.1-win64\`
-  * 포킹된 실행파일 언팩
-* **지원 방식**: CLI 명령어
-
 #### 데이터 흐름 (Tool Integration Flow)
 
 ```text
